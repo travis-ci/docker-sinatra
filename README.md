@@ -2,6 +2,8 @@
 
 This is sample project for running a sinatra application on Docker.
 
+It was cloned from [tcnksm](https://github.com/tcnksm-sample/docker-sinatra) and modified (with thanks).
+
 ## Usage
 
 Create Image
