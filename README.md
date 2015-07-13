@@ -39,6 +39,3 @@ docker rm $ID
 ## Reference
 
 - [Sinatra deployment with Docker](http://haanto.com/sinatra-deployment-with-docker/)
-
-# docker-sinatra
-
