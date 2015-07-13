@@ -1,4 +1,4 @@
-FROM base
+FROM ubuntu:14.04
 
 MAINTAINER tcnksm "https://github.com/tcnksm"
 
@@ -15,7 +15,7 @@ RUN cd /root/src/ruby-2.2.2; ./configure; make install
 RUN gem update --system
 RUN gem install bundler
 
-RUN git clone https://github.com/tcnksm/docker-sinatra /root/sinatra
+RUN git clone https://github.com/carlad/docker-sinatra /root/sinatra
 RUN cd /root/sinatra; bundle install
 
 EXPOSE 4567

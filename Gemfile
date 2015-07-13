@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'foreman'
 gem 'sinatra'
-gem 'thin'
+gem 'rake'
+gem 'capybara'
+gem 'test-unit'
