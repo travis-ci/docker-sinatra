@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Runing a sinatra application on Docker
 
 This is sample project for running a sinatra application on Docker.
@@ -40,6 +39,6 @@ docker rm $ID
 ## Reference
 
 - [Sinatra deployment with Docker](http://haanto.com/sinatra-deployment-with-docker/)
-=======
+
 # docker-sinatra
->>>>>>> 65d9979c98ac5eec887ebeeb8860d21edce8026f
+
