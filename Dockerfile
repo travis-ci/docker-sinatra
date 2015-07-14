@@ -19,4 +19,3 @@ RUN git clone https://github.com/travis-ci/docker-sinatra /root/sinatra
 RUN cd /root/sinatra; bundle install
 
 EXPOSE 4567
-CMD ["/usr/local/bin/foreman","start","-d","/root/sinatra"]
