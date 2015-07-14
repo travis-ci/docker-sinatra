@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: required
+sudo: true
 
 dist: trusty
 
