@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER tcnksm "https://github.com/tcnksm"
+MAINTAINER carlad "https://github.com/carlad"
 
 # Install packages for building ruby
 RUN apt-get update
@@ -15,7 +15,7 @@ RUN cd /root/src/ruby-2.2.2; ./configure; make install
 RUN gem update --system
 RUN gem install bundler
 
-RUN git clone https://github.com/carlad/docker-sinatra /root/sinatra
+RUN git clone https://github.com/travis-ci/docker-sinatra /root/sinatra
 RUN cd /root/sinatra; bundle install
 
 EXPOSE 4567

@@ -1,0 +1,14 @@
+language: ruby
+
+sudo: true
+
+dist: trusty
+
+before_install:
+- docker pull carlad/sinatra
+- docker
+
+# before_script:
+
+script:
+- bundle exec rake test
