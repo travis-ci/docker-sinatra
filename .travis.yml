@@ -1,8 +1,6 @@
 language: ruby
 
-sudo: true
-
-dist: trusty
+sudo: 9000
 
 before_install:
 - docker pull carlad/sinatra
