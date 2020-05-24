@@ -1,15 +1,33 @@
 sudo: required
-
-language: ruby
-
+language: python
 services:
-  - docker
-
+- docker
 before_install:
-- docker pull carlad/sinatra
-- docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
-- docker ps -a
-- docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+- curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/kubectl
+- chmod +x ./kubectl
+- mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+- curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/aws-iam-authenticator
+- chmod +x ./aws-iam-authenticator
+- mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
+- echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 
-script:
-- bundle exec rake test
+- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+- unzip awscliv2.zip
+- sudo ./aws/install
+#- touch ~/.aws/credentials
+-cat << EoF >> ~/.aws/config 
+[profile admin] 
+role_arn=arn:aws:iam::${ACCOUNT_ID}:role/k8sAdmin 
+source_profile=eksAdmin
+EOF
+
+- cat ~/.aws/credentials
+
+#- eval $(aws ecr get-login --no-include-email --region us-west-2)
+#- docker login --username=karthik958 --password=Karthik@98
+#- docker build -t flask-demo-app .
+#- docker run -d --name app flask-demo-app
+#- docker ps -a
+#script:
+#- docker tag flask-demo-app:latest karthik958/flask-demo-app:production
+#- docker push karthik958/flask-demo-app:production
