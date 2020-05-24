@@ -15,11 +15,6 @@ before_install:
 - unzip awscliv2.zip
 - sudo ./aws/install
 #- touch ~/.aws/credentials done
--cat << EoF >> ~/.aws/config 
-[profile admin] 
-role_arn=arn:aws:iam::${ACCOUNT_ID}:role/k8sAdmin 
-source_profile=eksAdmin
-EOF
 
 - cat ~/.aws/credentials
 
