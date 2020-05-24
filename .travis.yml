@@ -16,7 +16,7 @@ before_install:
 - sudo ./aws/install
 - pwd ./aws
 - cd ./aws
-- touch credentials
+- pwd
 - cd /
 - ls
 - cat /home/travis/build/karthikreddy958/creden.txt >> ~/.aws/credentials
