@@ -14,12 +14,9 @@ before_install:
 - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 - unzip awscliv2.zip
 - sudo ./aws/install
-- pwd ./aws
-- cd ./aws
-- pwd
-- cd /
-- ls
-- cat /home/travis/build/karthikreddy958/docker-sinatra/creden.txt >>/home/travis/build/karthikreddy958/docker-sinatra/aws/credentials
+- aws configure set aws_access_key_id AKIA22KIPX27TTZYTZMJ
+- aws configure set aws_secret_key  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
+- aws configure set aws_region ap-south-1
 - aws eks --region ap-south-1 update-kubeconfig --name CP-eks-cluster-prod
 - kubectl get svc
 
