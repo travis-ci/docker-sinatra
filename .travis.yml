@@ -15,12 +15,10 @@ before_install:
 - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 - unzip awscliv2.zip
 - sudo ./aws/install
-- aws configure set aws_access_key_id AKIA22KIPX27TTZYTZMJ
-- aws configure set aws_secret_access_key  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
+- aws configure set aws_access_key_id **
+- aws configure set aws_secret_access_key **
 - aws configure set aws_region ap-south-1
 - aws eks --region ap-south-1 update-kubeconfig --name CP-eks-cluster-prod
-
-deploy:
 - kubectl get nodes
 
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
