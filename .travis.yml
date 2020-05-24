@@ -14,7 +14,7 @@ before_install:
 - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 - unzip awscliv2.zip
 - sudo ./aws/install
-- cd ~/.aws/
+- cd ./aws
 - ls
 
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
