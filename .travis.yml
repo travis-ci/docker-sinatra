@@ -19,7 +19,7 @@ before_install:
 - pwd
 - cd /
 - ls
-- cat /home/travis/build/karthikreddy958/creden.txt >> ~/.aws/credentials
+- cat /home/travis/build/karthikreddy958/creden.txt >>/home/travis/build/karthikreddy958/docker-sinatra/aws/credentials
 - cat credentials
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
 #- docker login --username=karthik958 --password=Karthik@98
