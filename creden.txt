@@ -1,0 +1,4 @@
+[custom]
+aws_access_key_id=AKIAS3MG4PRB7LBT6Q3G
+aws_secret_access_key=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
+aws_region=ap-south-1
