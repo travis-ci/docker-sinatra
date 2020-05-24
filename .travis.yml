@@ -2,6 +2,7 @@ sudo: required
 language: python
 services:
 - docker
+
 before_install:
 - curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/kubectl
 - chmod +x ./kubectl
@@ -18,7 +19,9 @@ before_install:
 - aws configure set aws_secret_access_key  18QZs7IGKXjWcBmv8BFduzwLWf8CiwoCYZv56F9m
 - aws configure set aws_region ap-south-1
 - aws eks --region ap-south-1 update-kubeconfig --name CP-eks-cluster-prod
-- kubectl get svc
+
+deploy:
+- kubectl get nodes
 
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
 #- docker login --username=karthik958 --password=Karthik@98
