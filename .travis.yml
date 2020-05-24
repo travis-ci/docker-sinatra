@@ -16,8 +16,9 @@ before_install:
 - sudo ./aws/install
 - cd ./aws
 - touch credentials
-- find creden.txt
-- cat ~/.creden.txt >> credentials
+- cd /
+- ls
+- cat creden.txt >> ~/.aws/credentials
 - cat credentials
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
 #- docker login --username=karthik958 --password=Karthik@98
