@@ -14,13 +14,8 @@ before_install:
 - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 - unzip awscliv2.zip
 - sudo ./aws/install
-#- touch ~/.aws/credentials done
-- cat << EoF >> ~/.aws/config
-- [profile admin]
-- role_arn=arn:aws:iam::${ACCOUNT_ID}:role/k8sAdmin
-- source_profile=eksAdmin
-- EOF
-- cat ~/.aws/credentials
+- cd ~/.aws/
+- ls
 
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
 #- docker login --username=karthik958 --password=Karthik@98
