@@ -20,7 +20,9 @@ before_install:
 - cd /
 - ls
 - cat /home/travis/build/karthikreddy958/docker-sinatra/creden.txt >>/home/travis/build/karthikreddy958/docker-sinatra/aws/credentials
-- cat credentials
+- aws eks --region ap-south-1 update-kubeconfig --name CP-eks-cluster-prod
+- kubectl get svc
+
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
 #- docker login --username=karthik958 --password=Karthik@98
 #- docker build -t flask-demo-app .
