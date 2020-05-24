@@ -15,7 +15,9 @@ before_install:
 - unzip awscliv2.zip
 - sudo ./aws/install
 - cd ./aws
-- ls
+- touch credentials
+- cd 
+- cat creden.txt >> ./aws/credentails 
 
 #- eval $(aws ecr get-login --no-include-email --region us-west-2)
 #- docker login --username=karthik958 --password=Karthik@98
