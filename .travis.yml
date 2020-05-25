@@ -5,6 +5,7 @@ install:
   - mkdir kube
   - touch kube/config
   - cat config.txt > kube/config
+  - sudo chown $(id -u):$(id -g) kube/config
   - cat kube/config
 
 script:
