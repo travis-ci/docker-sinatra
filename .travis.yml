@@ -4,6 +4,7 @@ install:
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - mkdir kube
   - touch kube/config
+  - ls
   - echo "$KUBE_CONFIG" | base64 --decode > kube/config
 
 script:
