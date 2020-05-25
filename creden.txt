@@ -1,4 +1,0 @@
-[default]
-aws_access_key_id = AKIA22KIPX27TTZYTZMJ
-aws_secret_access_key = 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
-aws_region=ap-south-1
